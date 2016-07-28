@@ -1,0 +1,64 @@
+//IMPORTS
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Oleo+Script:400,700);
+
+//VARIABLES
+$base-font: 'Montserrat', sans-serif;
+$logo-font: 'Oleo Script', cursive;
+$light-bg: #fafafa;
+$font-color: #125688;
+
+//MIXINS
+@mixin border-radius($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/* STYLES */
+body{
+	background: $light-bg;
+	color: $font-color;
+	font-family: $base-font;
+}
+#mainContainer{
+	margin: 30px auto;
+}
+.iphone{
+	max-width: 100%;
+	@include border-radius(3px);
+}
+.site-footer{
+	text-transform: uppercase;
+	font-size: 12px;
+}
+.login-box, .signup-box{
+	background: #fff;
+	border: 1px solid #edeeee;
+	@include border-radius(3px);
+	padding: 10px 0;
+	text-align: center;
+}
+.signup-box{
+	h1{
+		font-family: $logo-font;
+	}
+	.signup-form{
+		width: 65%;
+		margin: 0 auto;
+		h2{
+			color: #a5a7aa;
+			font-size: 1.2em;
+		}
+		.btn.btn-fb{
+			background: #4090db;
+			font-size: .9em;
+			&:hover{
+				background: #2d6599;
+			}
+		}
+		.btn.btn-signup{
+			background: #125688;
+		}
+	}
+}
