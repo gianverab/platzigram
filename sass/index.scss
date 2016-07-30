@@ -1,11 +1,12 @@
 //IMPORTS
+@import "node_modules/materialize-css/sass/materialize.scss";
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Oleo+Script:400,700);
 
 //VARIABLES
 $base-font: 'Montserrat', sans-serif;
 $logo-font: 'Oleo Script', cursive;
 $light-bg: #fafafa;
-$font-color: #125688;
+$secondary-color: #125688;
 
 //MIXINS
 @mixin border-radius($radius) {
@@ -18,7 +19,7 @@ $font-color: #125688;
 /* STYLES */
 body{
 	background: $light-bg;
-	color: $font-color;
+	color: $secondary-color;
 	font-family: $base-font;
 }
 #mainContainer{
@@ -44,7 +45,7 @@ body{
 		font-family: $logo-font;
 	}
 	.signup-form{
-		width: 65%;
+		width: 75%;
 		margin: 0 auto;
 		h2{
 			color: #a5a7aa;
@@ -58,7 +59,7 @@ body{
 			}
 		}
 		.btn.btn-signup{
-			background: #125688;
+			background: $secondary-color;;
 		}
 	}
 }
