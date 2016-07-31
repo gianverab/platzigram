@@ -1,5 +1,13 @@
-var numbers = [400, 200, 1, -23];
+var page = require('page');
 
-var addNumbers = numbers.map(n => n+1);
+var main = document.getElementById('mainContainer');
 
-console.log(addNumbers);
+page('/', function(ctx, next){
+	main.innerHTML = 'Home <a href="/signup">Signup</a>';
+})
+
+page('/signup', function(ctx, next){
+	main.innerHTML = '<a href="/">Home</a> Signup';
+})
+
+page();
